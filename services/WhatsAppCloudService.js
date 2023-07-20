@@ -50,10 +50,6 @@ const sendMessage = async (from, messageType, text) => {
                 {
                   id: "assertive",
                   title: "Assertive"
-                },
-                {
-                  id: "excited",
-                  title: "Excited"
                 }
               ]
             }

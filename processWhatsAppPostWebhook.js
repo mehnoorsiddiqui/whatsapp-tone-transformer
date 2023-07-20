@@ -51,7 +51,7 @@ async function processWhatsAppPostWebhook(message) {
         await handleAudioMessage(from, msg, user);
         break;
       case "text":
-        await handleTextMessage(from);
+        await handleTextMessage(from,msg,user);
         break;
       default:
         break;

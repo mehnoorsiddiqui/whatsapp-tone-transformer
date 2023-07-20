@@ -1,16 +1,16 @@
-# WhatsApp Voice Magic
-![WhatsApp Voice Magic](./public/working.gif)
+# 🎙️ WhatsApp Tone Transformer
+![WhatsApp Tone Transformer](./public/working.gif)
 
 ## How it works
 
-WhatsApp voice magic is an audio message transcriber app created with APIMatic auto-generated SDKs for [WhatsApp](https://www.apimatic.io/apidocs/whatsapp-api/v/1_0#/http/guides/send-a-message)and [OpenAI Whisper](https://www.apimatic.io/api-docs/whisper-api) API.This voice transcriber bot can transcribe incoming voice messages in WhatsApp to text in real-time, enabling easy communication across languages.
+WhatsApp tone transformer can convert the an audio message transcription into different tones created with APIMatic auto-generated SDKs for [WhatsApp API ](https://www.apimatic.io/apidocs/whatsapp-api/v/1_0#/http/guides/send-a-message),['ChatGPT API ](https://www.apimatic.io/api-docs/whisper-api) API and ['Whisper API ](https://www.apimatic.io/api-docs/whisper-api) API.
 
-## Running Locally
+## 🔧 How to Run Locally
 
 ### Cloning the repository the local machine.
 
 ```bash
-git clone https://github.com/mehnoorsiddiqui/whatsapp-voice-magic
+git clone https://github.com/mehnoorsiddiqui/whatsapp-tone-transformer.git
 ```
 
 ### Creating a account on Meta to get an API key.
@@ -50,8 +50,3 @@ Then, run the application in the command line and it can be tested by sending an
 npm start
 ```
 
-## CodeSandbox
-
-1. Fork [this codesandbox](https://codesandbox.io/p/sandbox/whatsapp-voice-magic-lwqrdg) repo.
-2. Replace the access token with yours in the .env file.
-3. Add the URL of the running sandbox as the webhook URL in the developer account

@@ -6,27 +6,23 @@ async function handleListMessage(from, message, userObj) {
     switch (listReplyID) {
         case "default":
             userObj.setTone("default");
-            await sendMessage(from, "text", "You can now send messages to generate images");
+            await sendMessage(from, "text", "You'll receive all your transcribed messages in the original tone from now on.");
             break;
         case "professional":
             userObj.setTone("professional");
-            await sendMessage(from, "text", "Thank you for selecting the professional tone. We'll respond to you in a formal and respectful manner");
+            await sendMessage(from, "text", "Awesome! From now on, we'll transcribe all your messages in a professional tone");
             break;
         case "casual":
             userObj.setTone("casual");
-            await sendMessage(from, "text", "Thanks for selecting the casual tone. We'll keep it chill.");
+            await sendMessage(from, "text", "Cool choice! From now on, we'll transcribe all your messages in a casual tone to make sure they sound relaxed and easy-going.");
             break;
         case "friendly":
             userObj.setTone("friendly");
-            await sendMessage(from, "text", "Thank you for choosing the friendly tone. We'll make sure to keep it welcoming.");
+            await sendMessage(from, "text", "Cool choice! From now on, we'll transcribe all your messages in a friendly tone to make sure they sound welcoming and approachable.");
             break;
         case "assertive":
             userObj.setTone("assertive");
-            await sendMessage(from, "text", "Thanks for selecting the assertive tone. We'll respond with an assertive tone to make sure we address your needs.");
-            break;
-        case "excited":
-            userObj.setTone("excited");
-            await sendMessage(from, "text", "You can now talk to this bot in English");
+            await sendMessage(from, "text", "Great choice! From now on, we'll transcribe all your messages in an assertive tone to ensure that they sound confident, clear and impactful.");
             break;
         default:
             break;

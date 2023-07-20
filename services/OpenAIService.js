@@ -26,13 +26,18 @@ const createTranscription = async audioFilePath => {
   }
 };
 
-const createChatcompletion = async (promptMessage, messageTone) => {
+const createChatcompletion = async (promptMessage,isTranslatedMessage, messageTone) => {
   let prompt;
 
-  if (messageTone === "default") {
-    prompt = `${promptMessage}`;
-  } else if (messageTone !== "default") {
-    prompt = `convert [${promptMessage}] into [${messageTone}] tone. Do not add any descriptions or additional words. Answer in quotes.`;
+  if(isTranslatedMessage){
+    if (messageTone === "default") {
+      prompt = `${promptMessage}`;
+    } else if (messageTone !== "default") {
+      prompt = `convert [${promptMessage}] into [${messageTone}] tone. Do not add any descriptions or additional words. Answer in quotes.`;
+    }
+  } else{
+    prompt = `translate [${promptMessage}]  to English. Do not write any explanation or additional words with the translation. Only Send the translation in the quotation not any other information. 
+    If the message is already in English. Just send it in a quotation without explanation else send the translation. My first sentence/word is [${promptMessage} ].`;
   }
   try {
     const { result } = await openAIController.createChatCompletion({

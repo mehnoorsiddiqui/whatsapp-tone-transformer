@@ -16,11 +16,11 @@ async function handleAudioMessage(from, message, userObj) {
         if (messageTone === "default") {
             await sendMessage(from, "text", transcriptedMessage);
         } else if (messageTone !== "default") {
+            const chatGPTResponse = await createChatcompletion(transcriptedMessage,true, messageTone);
             const regex = /"([^"]*)"/;
-            const match = regex.exec(transcriptedMessage);
-            const gptPrompt = match ? match[1] : transcriptedMessage;
-            const chatGPTResponse = await createChatcompletion(gptPrompt, messageTone);
-            await sendMessage(from, "text", chatGPTResponse);
+            const match = regex.exec(chatGPTResponse);
+            const gptPrompt = match ? match[1] : chatGPTResponse;
+            await sendMessage(from, "text", gptPrompt);
         }
     } catch (error) {
         console.log(error)
